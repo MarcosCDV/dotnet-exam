@@ -13,9 +13,9 @@ namespace DotnetExam.Tests
             var respuesta = 
                 "La principal diferencia en .NET Framework y .NET Core es que .NET Framework es " +
                 "todo el ecosistema de microsoft donde esta incluido .NET Core,C#,F#,Visual Basic,etc." +
-                " En el .NET Framework no solo est·n" +
+                " En el .NET Framework no solo est√°n" +
                 "incluidos los lengujes desarrollados por miscrosoft sino tambien muchos otros creados " +
-                "por la comunidad. .NET Core es parte de .NET Framework y se lo diseÒÛ para que sea multiplataforma " +
+                "por la comunidad. .NET Core es parte de .NET Framework y se lo dise√±√≥ para que sea multiplataforma " +
                 ",es decir, que los projectos/soluciones/sitemas creados" +
                 "con .NET Core se lo puede ejecutar en Windows,Linux,Mc Os";
 
@@ -30,9 +30,9 @@ namespace DotnetExam.Tests
 
 
             //Describa que es un assembly o ensamblado en .NET
-            var respuesta = "Un ensamblado son los .dll(librerias,metadatos) y los .exe(codigo ejecutable). Estos contienen el cÛdigo ejecutable, metadatos sobre los tipos, referencias a otros ensamblado si corresponde" +
+            var respuesta = "Un ensamblado son los .dll(librerias,metadatos) y los .exe(codigo ejecutable). Estos contienen el c√≥digo ejecutable, metadatos sobre los tipos, referencias a otros ensamblado si corresponde" +
                 "y configuraciones necesarias. El ensamblado de algun lenguaje de .NET Framework" +
-                ",es decir, cualquier lenguaje que sea compatible con la CLR (Common Languague Runtime) se pueden usar entre sÌ, como por ejemplo, usar alguna libreria echa en Visaul Basic en una" +
+                ",es decir, cualquier lenguaje que sea compatible con la CLR (Common Languague Runtime) se pueden usar entre s√≠, como por ejemplo, usar alguna libreria echa en Visaul Basic en una" +
                 "aplicacion en C#";
 
             Assert.NotEqual(string.Empty, respuesta);
@@ -48,10 +48,10 @@ namespace DotnetExam.Tests
 
             //Describa que es el Lenguaje Intermedio o IL
             var respuesta = "Cuando se compila un programa en .NET, el compilador genera un archivo ejecutable o un " +
-                "archivo de biblioteca de clases que contiene el cÛdigo fuente compilado en CIL. " +
-                "El CIL se compila en cÛdigo de m·quina especÌfico de la plataforma en tiempo de ejecuciÛn" +
-                " por el Just-In-Time (JIT) compiler, que convierte el cÛdigo de m·quina CIL en cÛdigo de m·quina nativo" +
-                " que puede ser ejecutado directamente en el procesador ya que el compilador transforma el cÛdigo en uno" +
+                "archivo de biblioteca de clases que contiene el c√≥digo fuente compilado en CIL. " +
+                "El CIL se compila en c√≥digo de m√°quina espec√≠fico de la plataforma en tiempo de ejecuci√≥n" +
+                " por el Just-In-Time (JIT) compiler, que convierte el c√≥digo de m√°quina CIL en c√≥digo de m√°quina nativo" +
+                " que puede ser ejecutado directamente en el procesador ya que el compilador transforma el c√≥digo en uno" +
                 "de bajo nivel.";
 
             Assert.NotEqual(string.Empty, respuesta);
@@ -86,9 +86,9 @@ namespace DotnetExam.Tests
             var today = new DateTime(2023, 5, 9, 15, 00, 00);
 
             var diaTranscurridos = Math.Floor((today - finalWorldCupMatch).TotalDays);
-            var result = $"{diaTranscurridos} DÌas totales desde la final del mundo";
+            var result = $"{diaTranscurridos} D√≠as totales desde la final del mundo";
 
-            Assert.Equal("141 DÌas totales desde la final del mundo", result );
+            Assert.Equal("141 D√≠as totales desde la final del mundo", result );
 
         }
 
@@ -176,7 +176,7 @@ namespace DotnetExam.Tests
         }
 
         
-        [Fact]
+          [Fact]
         public void Test9_Collection_GetCountFirtLast()
         {
             //Utilice la coleccion del trabajo practico que presento
@@ -187,8 +187,8 @@ namespace DotnetExam.Tests
             Assert.Equal(10000, materias.Count);
 
             Assert.Equal(1000, materias.First().Alumnos.Count);
-            Assert.Equal("M1-000001/23", materias.First().Alumnos.First().Legajo);
-            Assert.Equal("M1-001000/23", materias.First().Alumnos.Last().Legajo);
+            Assert.Equal("M10000-000001/23", materias.First().Alumnos.First().Legajo);
+            Assert.Equal("M10000-001000/23", materias.First().Alumnos.Last().Legajo);
 
             for (int i = 0; i < 9999; i++)
             {
@@ -196,8 +196,8 @@ namespace DotnetExam.Tests
             }
 
             Assert.Equal(1000, materias.Peek().Alumnos.Count);
-            Assert.Equal("M10000-000001/23", materias.Last().Alumnos.First().Legajo);
-            Assert.Equal("M10000-001000/23", materias.Last().Alumnos.Last().Legajo);
+            Assert.Equal("M1-000001/23", materias.Last().Alumnos.First().Legajo);
+            Assert.Equal("M1-001000/23", materias.Last().Alumnos.Last().Legajo);
 
         }
 
