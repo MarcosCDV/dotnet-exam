@@ -1,21 +1,31 @@
 ﻿namespace DotnetExam.Entities
 {
-    public class Alumno
+    public class Alumno:Persona
     {
         public int AlumnoId { get; set; }
         public string Legajo { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
 
-        public string NombreCompleto { 
-            get { 
-                return $"{Nombre} {Apellido}";
-            } 
+        public Alumno(int alumnoID, string nombre, string apellido, String legajo)
+        {
+            this.Id = alumnoID;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.AlumnoId = alumnoID;
+            this.Legajo = legajo;
+        }
+
+        public Alumno()
+        {
+        }
+
+        public override string NombreCompleto()
+        { 
+            return $"{Nombre} {Apellido}";    
         }
 
         public override string ToString()
         {
-            return NombreCompleto;
+            return NombreCompleto();
         }
 
     }
